@@ -4,15 +4,15 @@
 
 <svg width="871" height="592" view_box="0 0 871 592"
 xmlns="http://www.w3.org/2000/svg"
-xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sat, 06 Nov 2021 07:14:12</desc>
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sat, 06 Nov 2021 10:02:44</desc>
 
 <rect id="frame" x="0" y="0" width="871" height="592" fill="#f5f5f5" stroke="none" stroke-width="0"/>
 
 <!-- Association contient -->
 <line x1="63" y1="51" x2="63" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="68.0" y="110" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="68.0" y="110" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
 <line x1="301" y1="261" x2="63" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="231" y="252.30804507" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
+<text x="230" y="252.30804507" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-contient">
 	<path d="M 81 118 a 14 14 90 0 1 14 14 V 143 h -64 V 132 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 95 143.0 v 11 a 14 14 90 0 1 -14 14 H 45 a 14 14 90 0 1 -14 -14 V 143.0 H 64" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -23,9 +23,9 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 
 <!-- Association Suivre -->
 <line x1="301" y1="261" x2="301" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="306.0" y="185" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="306.0" y="185" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
 <line x1="471" y1="51" x2="301" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="401" y="71.0294560214" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
+<text x="400" y="71.0294560214" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Suivre">
 	<path d="M 314 118 a 14 14 90 0 1 14 14 V 143 h -54 V 132 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 328 143.0 v 11 a 14 14 90 0 1 -14 14 H 288 a 14 14 90 0 1 -14 -14 V 143.0 H 54" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -36,10 +36,10 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 
 <!-- Association Appartient -->
 <line x1="650" y1="261" x2="650" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="655.0" y="202" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="655.0" y="202" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="655.0" y1="204" x2="676.0" y2="204" stroke="#01665e" stroke-width="1"/>
 <line x1="650" y1="51" x2="650" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="655.0" y="102" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
-<line x1="655.0" y1="104" x2="676.0" y2="104" stroke="#01665e" stroke-width="1"/>
+<text x="655.0" y="102" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Appartient">
 	<path d="M 675 118 a 14 14 90 0 1 14 14 V 143 h -78 V 132 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 689 143.0 v 11 a 14 14 90 0 1 -14 14 H 625 a 14 14 90 0 1 -14 -14 V 143.0 H 78" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -50,9 +50,9 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 
 <!-- Association compose -->
 <line x1="182" y1="51" x2="182" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="187.0" y="110" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="187.0" y="110" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
 <line x1="301" y1="261" x2="182" y2="143" stroke="#bf812d" stroke-width="2"/>
-<text x="231" y="227.340941212" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
+<text x="230" y="227.340941212" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-compose">
 	<path d="M 202 118 a 14 14 90 0 1 14 14 V 143 h -68 V 132 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 216 143.0 v 11 a 14 14 90 0 1 -14 14 H 162 a 14 14 90 0 1 -14 -14 V 143.0 H 68" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -93,9 +93,9 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 
 <!-- Association Auteur_recette -->
 <line x1="301" y1="261" x2="301" y2="388" stroke="#bf812d" stroke-width="2"/>
-<text x="306.0" y="346" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="306.0" y="346" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
 <line x1="471" y1="515" x2="301" y2="388" stroke="#bf812d" stroke-width="2"/>
-<text x="409" y="499.467740316" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
+<text x="391" y="486.767740316" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Auteur_recette">
 	<path d="M 340 363 a 14 14 90 0 1 14 14 V 388 h -106 V 377 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 354 388.0 v 11 a 14 14 90 0 1 -14 14 H 262 a 14 14 90 0 1 -14 -14 V 388.0 H 106" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -108,7 +108,7 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 <line x1="301" y1="261" x2="182" y2="388" stroke="#bf812d" stroke-width="2"/>
 <text x="230" y="306.703954885" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <line x1="471" y1="515" x2="182" y2="388" stroke="#bf812d" stroke-width="2"/>
-<text x="408" y="512.737682061" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="391" y="505.267093826" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Menu">
 	<path d="M 202 354 a 14 14 90 0 1 14 14 V 379 h -68 V 368 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 216 379.0 v 29 a 14 14 90 0 1 -14 14 H 162 a 14 14 90 0 1 -14 -14 V 379.0 H 68" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -136,10 +136,10 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 
 <!-- Association Consiste -->
 <line x1="63" y1="261" x2="182" y2="261" stroke="#bf812d" stroke-width="2"/>
-<text x="122" y="278.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="122" y="278.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
+<line x1="122" y1="280.0" x2="143" y2="280.0" stroke="#01665e" stroke-width="1"/>
 <line x1="301" y1="261" x2="182" y2="261" stroke="#bf812d" stroke-width="2"/>
-<text x="231" y="278.0" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
-<line x1="231" y1="280.0" x2="252" y2="280.0" stroke="#01665e" stroke-width="1"/>
+<text x="230" y="278.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Consiste">
 	<path d="M 201 236 a 14 14 90 0 1 14 14 V 261 h -66 V 250 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 215 261.0 v 11 a 14 14 90 0 1 -14 14 H 163 a 14 14 90 0 1 -14 -14 V 261.0 H 66" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -150,9 +150,9 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 
 <!-- Association Auteur_ingredient -->
 <line x1="650" y1="261" x2="650" y2="388" stroke="#bf812d" stroke-width="2"/>
-<text x="655.0" y="329" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="655.0" y="329" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
 <line x1="471" y1="515" x2="650" y2="388" stroke="#bf812d" stroke-width="2"/>
-<text x="512" y="501.06241317" fill="#01665e" font-family="Verdana" font-size="12">0,1</text>
+<text x="529" y="489.000960656" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Auteur_ingredient">
 	<path d="M 698 363 a 14 14 90 0 1 14 14 V 388 h -124 V 377 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 712 388.0 v 11 a 14 14 90 0 1 -14 14 H 602 a 14 14 90 0 1 -14 -14 V 388.0 H 124" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -165,7 +165,7 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 <line x1="650" y1="261" x2="803" y2="388" stroke="#bf812d" stroke-width="2"/>
 <text x="708" y="303.139879067" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <line x1="471" y1="515" x2="803" y2="388" stroke="#bf812d" stroke-width="2"/>
-<text x="512" y="515.235865877" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
+<text x="529" y="508.732853829" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
 <g id="association-Liste_d_achat">
 	<path d="M 848 354 a 14 14 90 0 1 14 14 V 379 h -118 V 368 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
 	<path d="M 862 379.0 v 29 a 14 14 90 0 1 -14 14 H 758 a 14 14 90 0 1 -14 -14 V 379.0 H 118" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
@@ -201,26 +201,26 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 	</g>
 	<text x="622" y="34.7" fill="#000000" font-family="Verdana" font-size="12">Category</text>
 	<text x="606" y="59.8" fill="#000000" font-family="Verdana" font-size="12">id_category</text>
-	<line x1="606" y1="62" x2="678" y2="62" style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4;"/>
+	<line x1="606" y1="62" x2="678" y2="62" stroke="#000000" stroke-width="1"/>
 	<text x="606" y="76.8" fill="#000000" font-family="Verdana" font-size="12">nom_category</text>
 </g>
 
 <!-- Entity Utilisateur -->
 <g id="entity-Utilisateur">
 	<g id="frame-Utilisateur">
-		<rect x="435" y="447" width="72" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="435" y="472.0" width="72" height="111" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="435" y="447" width="72" height="136" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="435" y1="472" x2="507" y2="472" stroke="#35978f" stroke-width="1"/>
+		<rect x="418" y="447" width="106" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="418" y="472.0" width="106" height="111" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="418" y="447" width="106" height="136" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="418" y1="472" x2="524" y2="472" stroke="#35978f" stroke-width="1"/>
 	</g>
 	<text x="440" y="464.7" fill="#000000" font-family="Verdana" font-size="12">Utilisateur</text>
-	<text x="440" y="489.7" fill="#000000" font-family="Verdana" font-size="12">id_user</text>
-	<line x1="440" y1="492" x2="486" y2="492" stroke="#000000" stroke-width="1"/>
-	<text x="440" y="506.7" fill="#000000" font-family="Verdana" font-size="12">username</text>
-	<text x="440" y="523.8" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
-	<text x="440" y="540.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="440" y="557.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
-	<text x="440" y="574.8" fill="#000000" font-family="Verdana" font-size="12">mdp</text>
+	<text x="423" y="489.7" fill="#000000" font-family="Verdana" font-size="12">id_user</text>
+	<line x1="423" y1="492" x2="469" y2="492" stroke="#000000" stroke-width="1"/>
+	<text x="423" y="506.7" fill="#000000" font-family="Verdana" font-size="12">login</text>
+	<text x="423" y="523.8" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
+	<text x="423" y="540.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="423" y="557.8" fill="#000000" font-family="Verdana" font-size="12">addresse_email</text>
+	<text x="423" y="574.8" fill="#000000" font-family="Verdana" font-size="12">mdp</text>
 </g>
 
 <!-- Entity Recette -->
@@ -233,7 +233,7 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 	</g>
 	<text x="277" y="210.7" fill="#000000" font-family="Verdana" font-size="12">Recette</text>
 	<text x="262" y="235.7" fill="#000000" font-family="Verdana" font-size="12">id_recette</text>
-	<line x1="262" y1="238" x2="324" y2="238" style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4;"/>
+	<line x1="262" y1="238" x2="324" y2="238" stroke="#000000" stroke-width="1"/>
 	<text x="262" y="252.7" fill="#000000" font-family="Verdana" font-size="12">nom_recette</text>
 	<text x="262" y="269.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
 	<text x="262" y="286.8" fill="#000000" font-family="Verdana" font-size="12">duree_total</text>
@@ -253,7 +253,7 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 	<text x="24" y="51.8" fill="#000000" font-family="Verdana" font-size="12">id_Img_vid</text>
 	<line x1="24" y1="54" x2="93" y2="54" stroke="#000000" stroke-width="1"/>
 	<text x="24" y="68.8" fill="#000000" font-family="Verdana" font-size="12">img_vid_link</text>
-	<text x="24" y="85.8" fill="#000000" font-family="Verdana" font-size="12">choose</text>
+	<text x="24" y="85.8" fill="#000000" font-family="Verdana" font-size="12">img_or_vid</text>
 </g>
 
 <!-- Entity Qualite -->
@@ -266,7 +266,7 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 	</g>
 	<text x="41" y="210.7" fill="#000000" font-family="Verdana" font-size="12">Qualite</text>
 	<text x="14" y="235.7" fill="#000000" font-family="Verdana" font-size="12">id_qualite</text>
-	<line x1="14" y1="238" x2="74" y2="238" stroke="#000000" stroke-width="1"/>
+	<line x1="14" y1="238" x2="74" y2="238" style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4;"/>
 	<text x="14" y="252.7" fill="#000000" font-family="Verdana" font-size="12">qualite</text>
 	<text x="14" y="269.8" fill="#000000" font-family="Verdana" font-size="12">qualite_calories</text>
 	<text x="14" y="286.8" fill="#000000" font-family="Verdana" font-size="12">qualite_lipides</text>
@@ -284,7 +284,7 @@ xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 l
 	</g>
 	<text x="618" y="227.7" fill="#000000" font-family="Verdana" font-size="12">Ingredient</text>
 	<text x="602" y="252.7" fill="#000000" font-family="Verdana" font-size="12">id_ingredient</text>
-	<line x1="602" y1="255" x2="682" y2="255" stroke="#000000" stroke-width="1"/>
+	<line x1="602" y1="255" x2="682" y2="255" style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4;"/>
 	<text x="602" y="269.8" fill="#000000" font-family="Verdana" font-size="12">nom_ingredient</text>
 	<text x="602" y="286.8" fill="#000000" font-family="Verdana" font-size="12">type</text>
 	<text x="602" y="303.8" fill="#000000" font-family="Verdana" font-size="12">qualite</text>
