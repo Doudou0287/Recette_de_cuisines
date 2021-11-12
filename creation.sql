@@ -12,17 +12,27 @@ CREATE TABLE Utilisateur (
   CONSTRAINT login_UNIQUE UNIQUE (login )
 );
 
+-- Table Regime
+
+CREATE TABLE Regime (
+  id_regime INT NOT NULL,
+  nom_regime VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id_regime)
+);
+
+----------------------------------------------------------
 
 -- Table Recette
 
 CREATE TABLE Recette (
   id_recette INT NOT NULL,
   nom_recette VARCHAR(45) NOT NULL,
-  description VARCHAR(45) NULL,
-  duree_total INT CHECK (duree_total > 0) NOT NULL,
+  description varchar(4000) NULL,
+  duree_total DATE NOT NULL,
   prix INT CHECK (prix > 0) NULL,
   difficulte INT CHECK (difficulte > 0) NULL,
-  utilisateur_id_user INT NOT NULL,
+  utilisateur_id_user INT NULL,
+  regime_id_regime INT NULL,
   PRIMARY KEY (id_recette)
 );
 
@@ -32,6 +42,14 @@ ALTER TABLE Recette
 	ADD CONSTRAINT fk_recette_User1
     FOREIGN KEY (utilisateur_id_user)
     REFERENCES Utilisateur (id_user)
+    ON DELETE CASCADE;
+
+
+
+ALTER TABLE Recette
+	ADD CONSTRAINT fk_recette_regime
+    FOREIGN KEY (regime_id_regime)
+    REFERENCES Regime (id_regime)
     ON DELETE CASCADE;
 
 
@@ -45,9 +63,9 @@ ALTER TABLE Recette
 
 
 ------------------------------------------------------
--- Table Categorie
+-- Table Category
 
-CREATE TABLE Categorie (
+CREATE TABLE Category (
   id_category INT NOT NULL,
   nom_category VARCHAR(45) NOT NULL,
   PRIMARY KEY (id_category)
@@ -64,9 +82,9 @@ CREATE TABLE Ingrediant (
   nom_ingrediant VARCHAR(45) NOT NULL,
   type VARCHAR(45) NULL,
   qualite VARCHAR(45) NULL,
-  Categorie_id_category INT NOT NULL,
-  PRIMARY KEY (id_ingrediant, Categorie_id_category),
-  CONSTRAINT id_UNIQUE UNIQUE (id_ingrediant)
+  category_id_category INT NOT NULL,
+  utilisateur_id_user INT NULL,
+  PRIMARY KEY (id_ingrediant)
 );
 
 
@@ -74,18 +92,17 @@ CREATE TABLE Ingrediant (
 
 ALTER TABLE Ingrediant
 	ADD CONSTRAINT fk_ingrediant_Categorie1
-    FOREIGN KEY (Categorie_id_category)
-    REFERENCES Categorie (id_category)
+    FOREIGN KEY (category_id_category)
+    REFERENCES Category (id_category)
+    ON DELETE CASCADE;
+    
+ALTER TABLE Ingrediant
+	ADD CONSTRAINT fk_ingrediant_user
+    FOREIGN KEY (utilisateur_id_user)
+    REFERENCES Utilisateur (id_user)
     ON DELETE CASCADE;
 
 
--- Table Regime
-
-CREATE TABLE Regime (
-  id_regime INT NOT NULL,
-  nom_regime VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id_regime)
-);
 
 
 
@@ -95,8 +112,8 @@ CREATE TABLE Regime (
 
 CREATE TABLE Img_vid (
   id_Img_vid INT CHECK (id_Img_vid > 0) NOT NULL,
-  img_vid_link VARCHAR(45) NOT NULL,
-  img_or_vid VARCHAR(45) NULL,
+  img_vid_link VARCHAR(4000) NOT NULL,
+  img_or_vid CHAR(1) NULL,
   recette_id_recette INT NOT NULL,
   PRIMARY KEY (id_Img_vid)
 );
@@ -109,14 +126,16 @@ ALTER TABLE Img_vid
     REFERENCES Recette (id_recette)
     ON DELETE CASCADE;
 
+ALTER TABLE Img_vid
+	ADD  CONSTRAINT ch_img_or_vid CHECK (img_or_vid = 'i' or img_or_vid = 'v');
 
 -- Table Etape
 
 CREATE TABLE Etape (
   id_etape INT CHECK (id_etape > 0) NOT NULL,
   nom_etape VARCHAR(45) NOT NULL,
-  duree INT NULL,
-  recette_id_recette INT NOT NULL,
+  duree DATE NULL,
+  recette_id_recette INT NULL,
   PRIMARY KEY (id_etape)
 );
 
@@ -157,11 +176,11 @@ ALTER TABLE Qualite
 
 --Table Recette_contient_Ingredient
 
-CREATE TABLE Recette_contient_Ingredient (
+CREATE TABLE Recette_contient_Ingrediant (
   recette_id_recette INT NOT NULL,
   ingrediant_id_ingrediant INT NOT NULL,
   quantite_unit INT NULL,
-  quantite_game INT NULL,
+  quantite_gramme INT NULL,
   nbr_personne INT NOT NULL,
   PRIMARY KEY (recette_id_recette, ingrediant_id_ingrediant)
 );
@@ -174,7 +193,7 @@ CREATE TABLE Menu (
   id_menu INT CHECK (id_menu > 0) NOT NULL,
   recette_id_recette INT NOT NULL,
   utilisateur_id_user INT NOT NULL,
-  date_menu VARCHAR(45) NOT NULL,
+  date_menu DATE NOT NULL,
   PRIMARY KEY (id_menu, recette_id_recette, utilisateur_id_user)
 );
   
@@ -200,7 +219,7 @@ CREATE TABLE Dispose (
   id_dispose INT CHECK (id_dispose > 0) NOT NULL,
   utilisateur_id_user INT NOT NULL,
   ingrediant_id_ingrediant INT NOT NULL,
-  date_dispose INT NOT NULL,
+  date_dispose DATE NOT NULL,
   PRIMARY KEY (id_dispose, utilisateur_id_user, ingrediant_id_ingrediant)
 );
   
@@ -253,9 +272,9 @@ ALTER TABLE Liste_d_achat
 
 
 CREATE TABLE Interdit (
-  interdit CHAR(1) CHECK ((interdit = 'Y') or (interdit = 'N')) NOT NULL,
   regime_idRegime INT NOT NULL,
   ingrediant_id_ingrediant INT NOT NULL,
+  interdit CHAR(1) CHECK ((interdit = 'Y') or (interdit = 'N')) NOT NULL,
   PRIMARY KEY (regime_idRegime, ingrediant_id_ingrediant)
 );
 
@@ -299,6 +318,5 @@ CREATE TABLE ArchiveListe (
   date_archive_liste DATE NOT NULL,
   PRIMARY KEY (ingrediant_id_ingrediant, utilisateur_id_user)
 );
-
 
 
