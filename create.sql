@@ -1,4 +1,3 @@
-
 -- Table Utilisateur
 
 CREATE TABLE Utilisateur (
@@ -28,11 +27,12 @@ CREATE TABLE Recette (
   id_recette INT NOT NULL,
   nom_recette VARCHAR(45) NOT NULL,
   description varchar(4000) NULL,
-  duree_total DATE NOT NULL,
+  duree_total INT NOT NULL,
   prix INT CHECK (prix > 0) NULL,
   difficulte INT CHECK (difficulte > 0) NULL,
   utilisateur_id_user INT NULL,
   regime_id_regime INT NULL,
+  nbr_personne INT NOT NULL,
   PRIMARY KEY (id_recette)
 );
 
@@ -82,7 +82,6 @@ CREATE TABLE Ingrediant (
   nom_ingrediant VARCHAR(45) NOT NULL,
   type VARCHAR(45) NULL,
   qualite VARCHAR(45) NULL,
-  category_id_category INT NOT NULL,
   utilisateur_id_user INT NULL,
   PRIMARY KEY (id_ingrediant)
 );
@@ -90,12 +89,6 @@ CREATE TABLE Ingrediant (
 
 -- Alter Tables Ingrediant 
 
-ALTER TABLE Ingrediant
-	ADD CONSTRAINT fk_ingrediant_Categorie1
-    FOREIGN KEY (category_id_category)
-    REFERENCES Category (id_category)
-    ON DELETE CASCADE;
-    
 ALTER TABLE Ingrediant
 	ADD CONSTRAINT fk_ingrediant_user
     FOREIGN KEY (utilisateur_id_user)
@@ -134,7 +127,7 @@ ALTER TABLE Img_vid
 CREATE TABLE Etape (
   id_etape INT CHECK (id_etape > 0) NOT NULL,
   nom_etape VARCHAR(45) NOT NULL,
-  duree DATE NULL,
+  duree INT NULL,
   recette_id_recette INT NULL,
   PRIMARY KEY (id_etape)
 );
@@ -181,9 +174,47 @@ CREATE TABLE Recette_contient_Ingrediant (
   ingrediant_id_ingrediant INT NOT NULL,
   quantite_unit INT NULL,
   quantite_gramme INT NULL,
-  nbr_personne INT NOT NULL,
   PRIMARY KEY (recette_id_recette, ingrediant_id_ingrediant)
 );
+
+---------------------------------------------------------
+ALTER TABLE Recette_contient_Ingrediant
+        ADD CONSTRAINT fk_recette_contient_ingrediant1
+    FOREIGN KEY (recette_id_recette)
+    REFERENCES Recette (id_recette)
+    ON DELETE CASCADE;
+
+ALTER TABLE Recette_contient_Ingrediant
+        ADD CONSTRAINT fk_recette_contient_ingrediant
+    FOREIGN KEY (ingrediant_id_ingrediant)
+    REFERENCES Ingrediant (id_ingrediant)
+    ON DELETE CASCADE;
+
+
+
+--------------------------------------------------------
+-- table cat_ingr
+
+CREATE TABLE Ingrediant_category (
+  ingrediant_id_ingrediant INT NOT NULL,
+  cat_id_category INT NOT NULL,
+  PRIMARY KEY (cat_id_category, ingrediant_id_ingrediant)
+);
+
+---------------------------------------------------------
+
+
+ALTER TABLE Ingrediant_category
+        ADD CONSTRAINT fk_ingrediant_category1
+    FOREIGN KEY (cat_id_category)
+    REFERENCES Category (id_category)
+    ON DELETE CASCADE;
+
+ALTER TABLE Ingrediant_category
+        ADD CONSTRAINT fk_ingrediant_category
+    FOREIGN KEY (ingrediant_id_ingrediant)
+    REFERENCES Ingrediant (id_ingrediant)
+    ON DELETE CASCADE;
 
 
 ---------------------------------------------------------
@@ -297,8 +328,8 @@ ALTER TABLE Interdit
 --------------------------------------------------------------------------------
 ------------------------------------------
 
-
 CREATE TABLE ArchiveMenu (
+  id_archive_menu INT NOT NULL,
   recette_id_recette INT NOT NULL,
   utilisateur_id_user INT NOT NULL,
   date_archive_menu DATE NOT NULL,
@@ -306,6 +337,7 @@ CREATE TABLE ArchiveMenu (
 );
 
 CREATE TABLE ArchiveDispose (
+  id_archive_dispose INT NOT NULL,
   ingrediant_id_ingrediant INT NOT NULL,
   utilisateur_id_user INT NOT NULL,
   date_archive_dispose DATE NOT NULL,
@@ -313,10 +345,9 @@ CREATE TABLE ArchiveDispose (
 );
 
 CREATE TABLE ArchiveListe (
+  id_archive_achat INT NOT NULL,
   ingrediant_id_ingrediant INT NOT NULL,
   utilisateur_id_user INT NOT NULL,
   date_archive_liste DATE NOT NULL,
   PRIMARY KEY (ingrediant_id_ingrediant, utilisateur_id_user)
 );
-
-

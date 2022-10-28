@@ -1,7 +1,7 @@
------------------------------------
-drop table Dispose cascade constraint;
+drop table Dispose PURGE;
 drop table Liste_d_achat cascade constraint;
 drop table Recette_contient_Ingrediant cascade constraint;
+drop table Ingrediant_category cascade constraint;
 drop table Interdit cascade constraint;
 -------------------------------------
 
@@ -23,5 +23,3 @@ drop table Regime cascade constraint;
 drop table ArchiveMenu cascade constraint;
 drop table ArchiveDispose cascade constraint;
 drop table ArchiveListe cascade constraint;
-
-

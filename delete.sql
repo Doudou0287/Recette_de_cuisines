@@ -85,4 +85,4 @@ FROM
     Liste_d_achat
 WHERE
     id_Liste_d_achat > 0;
-  
+
